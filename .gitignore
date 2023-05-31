@@ -2,5 +2,5 @@ geckodriver.log
 virtualenv
 __pycache__
 *.pyc
-.env
-.sqlite3
+*.env
+*.sqlite3
