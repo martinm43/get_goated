@@ -29,20 +29,20 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: don't run with debug turned on in production
 # help we're having problem with hosts, the code works outside of this.
-print(os.getenv("DJANGO_DEBUG_FALSE"))
+#print(os.getenv("DJANGO_DEBUG_FALSE"))
 
 if os.getenv("DJANGO_DEBUG_FALSE") is not None:  
-    print("Yes!")
+#    print("Yes!")
     DEBUG = False
     SECRET_KEY = os.environ['DJANGO_SECRET_KEY']  
     ALLOWED_HOSTS = [os.environ['SITENAME']]  
 else:
-    print("No!!")
+#    print("No!!")
     DEBUG = True  
     SECRET_KEY = 'insecure-key-for-dev'
     ALLOWED_HOSTS = ["*"]
 
-print(f"Allowed hosts: {ALLOWED_HOSTS}")
+# print(f"Allowed hosts: {ALLOWED_HOSTS}")
 
 # Application definition
 
