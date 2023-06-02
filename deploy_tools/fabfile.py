@@ -5,6 +5,15 @@ from fabric.api import cd, env, local, run
 REPO_URL = 'git@github.com:martinm43/get_goated.git'  
 env.user = "m2"
 
+#Author's Note
+#paramiko and fabric have broken ssh key handling
+#this issue is not fixed as of 1.14 fabric3.
+#safe fix is to enable password login BUT restrict it to safe IPs
+#the "theoretical" fix of using a specialized key without passphrase for 
+#fabric is included here for posterity. 
+#env.key_filename = "/Users/martin/.ssh/id_rsa_fabric"
+
+
 def deploy():
     site_folder = f'/home/{env.user}/sites/{env.host}'  
     run(f'mkdir -p {site_folder}')  
@@ -47,5 +56,4 @@ def _update_static_files():
 
 def _update_database():
     run(f'/home/{env.user}/miniconda3/envs/goated_env/bin/python manage.py migrate --noinput') 
-
 
