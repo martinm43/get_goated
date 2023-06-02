@@ -3,6 +3,8 @@
 A follow along with *Obey the Testing Goat*, about test-driven development (TDD) 
 using Python, Django, Selenium, and Debian/Ubuntu.
 
+Status: Ch 12
+
 ## Notes and Deviations
 
 Rough notes on what I did differently:
