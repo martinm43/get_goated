@@ -19,6 +19,7 @@ class ItemValidationTest(FunctionalTest):
 
         # The home page refreshes, and there is an error message saying
         # that list items cannot be blank
+        #think of this as a cousin of the "wait 5 secs before making requests"
         self.wait_for(lambda: self.assertEqual(  
         self.browser.find_element_by_css_selector('.has-error').text,
         "You can't have an empty list item"
