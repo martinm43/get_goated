@@ -2,7 +2,7 @@ import random
 from fabric.contrib.files import append, exists
 from fabric.api import cd, env, local, run
 
-REPO_URL = 'https://github.com/martinm43/get_goated.git'  
+REPO_URL = 'git@github.com:martinm43/get_goated.git'  
 env.user = "m2"
 
 def deploy():
